@@ -15,7 +15,9 @@ const NavBarExample = () => {
                 <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>               
             </Nav>
             <Nav>
-                <Nav.Link>Carrito</Nav.Link>
+                <Nav.Link>
+                🛒
+                </Nav.Link>
                     <Nav.Link eventKey={2} href="#memes">
                         0
                 </Nav.Link>
