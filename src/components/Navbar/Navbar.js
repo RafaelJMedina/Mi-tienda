@@ -1,7 +1,8 @@
 import { Navbar, Nav, Container } from "react-bootstrap"
 import { Outlet, Link } from "react-router-dom"
+import CartWidget from "../CartWidget/CartWidget"
 
-const NavBarExample = () => {
+const NavBar = () => {
     return(
        <>    
        <Navbar className="navBg" variant="dark" expand="lg">
@@ -16,7 +17,7 @@ const NavBarExample = () => {
             </Nav>
             <Nav>
                 <Nav.Link>
-                🛒
+                <CartWidget />
                 </Nav.Link>
                     <Nav.Link eventKey={2} href="#memes">
                         0
@@ -32,4 +33,4 @@ const NavBarExample = () => {
        </> 
     )
 }
-export default NavBarExample
+export default NavBar

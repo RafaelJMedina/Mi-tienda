@@ -1,27 +1,26 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-
-//importamos los comp creados
-import About from './components/About';
-import Contact from './components/Contact';
-import Home from './components/Home';
-import NavBarExample from './components/Navbar';
-
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Navbar from './components/Navbar/Navbar'
+import { ItemListContainer } from './pages/ItemListContainer/ItemListContainer';
+//
 function App() {
   return (
     <div className="App">
-
-<BrowserRouter>
-<Routes>
-  <Route path='/' element={ <NavBarExample /> }>
-    <Route index element={ <Home /> } />
-    <Route path='about' element={ <About /> } />
-    <Route path='contact' element={ <Contact /> } />
-    <Route path='*' element={ <Navigate replace to="/"/> }/>
-  </Route>
-</Routes> 
-</BrowserRouter>
-
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Navbar/> }>
+          <Route index element={ <Home /> } />
+          <Route path='about' element={ <About /> } />
+          <Route path='contact' element={ <Contact /> } />
+          <Route path='*' element={ <Navigate replace to="/"/> }/>
+        </Route>
+      </Routes> 
+      </BrowserRouter>
+      <ItemListContainer greeting="Hola Mundo"/>
     </div>
   );
 }
