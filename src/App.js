@@ -4,7 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import Navbar from './components/Navbar/Navbar'
+import NavBar from './components/Navbar/NavBar'
 import { ItemListContainer } from './pages/ItemListContainer/ItemListContainer';
 //
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={ <Navbar/> }>
+        <Route path='/' element={ <NavBar/> }>
           <Route index element={ <Home /> } />
           <Route path='about' element={ <About /> } />
           <Route path='contact' element={ <Contact /> } />
