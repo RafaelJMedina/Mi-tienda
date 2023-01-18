@@ -4,11 +4,13 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import NavBar from './components/Navbar/NavBar'
-import { ItemListContainer } from './pages/ItemListContainer/ItemListContainer';
-//
+import NavBar from './components/Navbar/NavBar';
+import ProductoLista from './components/Productos/Productos';
+import { DataProvider } from './context/DataProvider';
+
 function App() {
   return (
+    <DataProvider>
     <div className="App">
       <BrowserRouter>
       <Routes>
@@ -20,8 +22,9 @@ function App() {
         </Route>
       </Routes> 
       </BrowserRouter>
-      <ItemListContainer greeting="Hola Mundo"/>
     </div>
+      <ProductoLista />
+    </DataProvider>
   );
 }
 
